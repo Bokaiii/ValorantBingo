@@ -114,6 +114,7 @@ export class DataService {
     'Freebie',
     'Kill with Odin or Aries',
     'TTV/YT',
+    'Sentinel rat'
     ]
   }
 
