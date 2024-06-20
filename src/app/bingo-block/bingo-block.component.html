@@ -1,0 +1,5 @@
+<div class="bingo-block selectable" [class.completed]="bingoItem.completed" (click)="toggleCompletion()">
+    <div class="action" *ngIf="bingoItem.actionable">*</div>
+
+    <span style="font-size: calc(1vw + 1vh); text-align: center;">{{bingoItem.title}}</span>
+</div>
