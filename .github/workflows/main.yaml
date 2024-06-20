@@ -29,3 +29,4 @@ jobs:
           TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: prod
           FOLDER: docs/browser
+          TARGET-FOLDER: .
