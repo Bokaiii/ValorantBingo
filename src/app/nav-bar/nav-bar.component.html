@@ -1,0 +1,7 @@
+<div class="nav-bar-container">
+    <button class="selectable" (click)="newBingoBoard()">Generate new card</button>
+    <button class="selectable end" (click)="download()">
+        Download card
+        <fa-icon [icon]="faCheck" *ngIf="hasDownloaded"></fa-icon>
+    </button>
+</div>
