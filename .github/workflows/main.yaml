@@ -29,4 +29,3 @@ jobs:
           TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: prod
           FOLDER: docs
-          TARGET-FOLDER: docs
