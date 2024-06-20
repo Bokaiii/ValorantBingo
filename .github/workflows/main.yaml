@@ -24,7 +24,7 @@ jobs:
         run: npm run build:prod
 
       - name: Deploy to gh pages
-        uses: JamesIves/github-pages-deploy-actions@releases/v2
+        uses: JamesIves/github-pages-deploy-action@releases/v2
         with:
           ACCESS_TOKEN: ${{secrets.GH_TOKEN}}
           BASE_BRANCH: main
