@@ -25,8 +25,8 @@ jobs:
 
       - name: Deploy to gh pages
         uses: JamesIves/github-pages-deploy-action@releases/v2
-        with:
-          GITHUB_TOKEN: ${{secrets.ValorantBingo_TOKEN}}
+        env:
+          PERSONAL_TOKEN: ${{secrets.ACCESS_TOKEN}}
           BASE_BRANCH: main
           BRANCH: prod
-          FOLDER: dist/browser
+          FOLDER: dist
