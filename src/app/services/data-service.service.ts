@@ -119,7 +119,6 @@ export class DataService {
     'Ping spiking',
     'No habla english',
     'Forgot spike',
-    'Broken Iso buff'
     ]
   }
 
