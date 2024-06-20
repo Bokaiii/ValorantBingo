@@ -27,5 +27,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: main
+          BASE_BRANCH: main
+          BRANCH: prod
           FOLDER: docs
