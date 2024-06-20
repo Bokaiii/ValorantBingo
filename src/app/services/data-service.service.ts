@@ -115,7 +115,11 @@ export class DataService {
     'Kill with Odin or Aries',
     'TTV/YT',
     'Sentinel rat',
-    'VCT game changer'
+    'VCT game changer',
+    'Ping spiking',
+    'No habla english',
+    'Forgot spike',
+    'Broken Iso buff'
     ]
   }
 
