@@ -12,7 +12,7 @@ import * as htmlToImage from 'html-to-image'
   standalone: true,
   imports: [NavBarComponent, BingoBoardComponent, DownloadBoardComponent, NgIf],
   templateUrl: './overview.component.html',
-  styleUrl: './overview.component.scss'
+  styleUrl: './overview.component.css'
 })
 export class OverviewComponent implements OnInit {
   private darkMode: boolean = false;

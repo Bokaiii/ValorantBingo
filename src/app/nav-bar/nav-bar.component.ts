@@ -3,7 +3,6 @@ import { DataService } from '../services/data-service.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { NgIf } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 
 @Component({
@@ -11,7 +10,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [FontAwesomeModule, NgIf],
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss'
+  styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
 

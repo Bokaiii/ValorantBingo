@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import url(../src/themes.scss);
-@import url(../src/animations.scss);
+@import url(../src/themes.css);
+@import url(../src/animations.css);
 
 html {
     background-color: var(--background-color);

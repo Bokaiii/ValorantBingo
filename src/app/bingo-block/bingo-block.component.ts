@@ -7,7 +7,7 @@ import { NgIf } from '@angular/common';
   standalone: true,
   imports: [NgIf],
   templateUrl: './bingo-block.component.html',
-  styleUrl: './bingo-block.component.scss'
+  styleUrl: './bingo-block.component.css'
 })
 export class BingoBlockComponent {
   @Input() public bingoItem!: BingoItem;

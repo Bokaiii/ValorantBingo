@@ -8,7 +8,7 @@ import { BingoItem } from '../../typings';
   standalone: true,
   imports: [BingoBlockComponent, NgFor],
   templateUrl: './download-board.component.html',
-  styleUrl: './download-board.component.scss'
+  styleUrl: './download-board.component.css'
 })
 export class DownloadBoardComponent {
   @Input() public bingoItems: BingoItem[] = [];
