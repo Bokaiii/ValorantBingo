@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --output-path=docs --base-href=/ValorantBingo",
+    "build:prod": "ng build --output-path docs --base-href=/ValorantBingo/ --deploy-url=/ValorantBingo/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
