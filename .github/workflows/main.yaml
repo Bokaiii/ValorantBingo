@@ -1,31 +1,31 @@
-# name: Build and Deploy Script
+name: Build and Deploy Script
 
-# on:
-#   push:
-#     branches:
-#       - main
+on:
+  push:
+    branches:
+      - main
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout Repository
-#         uses: actions/checkout@v2
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-#       - name: Adding Node.js
-#         uses: actions/setup-node@v3
-#         with:
-#           node-version: 20
+      - name: Adding Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
-#       - name: Install Dependencies
-#         run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-#       - name: Build Angular App
-#         run: npm run build:prod
+      - name: Build Angular App
+        run: npm run build:prod
 
-#       - name: Deploy to gh pages
-#         uses: JamesIves/github-pages-deploy-action@v4
-#         with:
-#           TOKEN: ${{ secrets.ACCESS_TOKEN }}
-#           BRANCH: prod
-#           FOLDER: docs
+      - name: Deploy to gh pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: prod
+          FOLDER: docs
