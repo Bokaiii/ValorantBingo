@@ -49,7 +49,7 @@ export class OverviewComponent implements OnInit {
   public async download(): Promise<void> {
     this.isDownloading = true;
 
-    this.bingoItemsDownload = this.bingoItems;
+    this.bingoItemsDownload = this.bingoItems.map(item => ({...item}));
     for(let b of this.bingoItemsDownload) {
       b.completed = false;
     }
