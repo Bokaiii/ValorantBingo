@@ -120,6 +120,10 @@ export class DataService {
     'No habla english',
     'Forgot spike',
     'Weeb',
+    'Neon slide kill',
+    'Util dump',
+    'Duelist doesn\' entry',
+    'Only duelist lurking'
     ]
   }
 
@@ -154,6 +158,10 @@ export class DataService {
     'Flawless',
     'Thrifty',
     'Util assist',
+    'Win a round',
+    'Lose a round',
+    'Ghost kill',
+    'Guardian kill',
     ]
   }
   
