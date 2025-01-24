@@ -1,5 +1,5 @@
 <div *ngIf="!isDownloading" class="container fade-in" style="--fade-duration: 2s;">
-    <app-nav-bar (downloadEmitter)="download()"></app-nav-bar>
+    <app-nav-bar (downloadEmitter)="download()" (toggleEmitter)="onToggle($event)"></app-nav-bar>
     <app-bingo-board id="bingo-board" style="height: 100%;" [bingoItems]="bingoItems"></app-bingo-board>
 </div>
 

@@ -7,21 +7,30 @@ import { BingoItem } from '../../typings';
 export class DataService {
 
   private actionAmt: number = 8;
+  private playerAmt: number = 5;
   public storedList: BingoItem[] = [];
 
   constructor() { }
 
-  public getBingoBoard(): BingoItem[] {
+  public getBingoBoard(bokaiiPlaying: boolean): BingoItem[] {
     //Reset board
     let selectedBingoItems: BingoItem[] = [];
 
+    //Add actions
     for(let i = 0; i < this.actionAmt; i++) {
       console.log('Added random action');
       
       this.addRandomItem(this.actionList, selectedBingoItems, true);
     }
 
-    let remainingItemCount = 25 - this.actionAmt;
+    //Add player specific items
+    for(let i = 0; i < this.playerAmt; i++) {
+      console.log('Added player specific action');
+      
+      this.addPlayerItem(bokaiiPlaying, selectedBingoItems);
+    }
+
+    let remainingItemCount = 25 - this.actionAmt - this.playerAmt;
     for(let i = 0; i < remainingItemCount; i++) {
       this.addRandomItem(this.bingoList, selectedBingoItems, false);
     }
@@ -50,6 +59,23 @@ export class DataService {
     }
 
     this.addRandomItem(bingoList, selectedBingoItems, action);
+  }
+
+  private addPlayerItem(bokaiiPlaying: boolean, selectedBingoItems: BingoItem[]) {
+    let bingoList: string[] = bokaiiPlaying ? this.bokaiiList : this.zankList;
+
+    let random: BingoItem = {
+      title: bingoList[Math.floor(Math.random() * bingoList.length)],
+      actionable: false,
+      completed: false
+    }
+
+    if(selectedBingoItems.filter(b => b.title == random.title).length == 0) {
+      selectedBingoItems.push(random);
+      return;
+    }
+
+    this.addPlayerItem(bokaiiPlaying, selectedBingoItems);
   }
 
   private get bingoList(): string[] {
@@ -123,7 +149,10 @@ export class DataService {
     'Neon slide kill',
     'Util dump',
     'Duelist doesn\' entry',
-    'Only duelist lurking'
+    'Only duelist lurking',
+    'Body block',
+    'Sova lineup',
+    'French'
     ]
   }
 
@@ -163,6 +192,28 @@ export class DataService {
     'Ghost kill',
     'Guardian kill',
     ]
+  }
+
+  private get bokaiiList(): string[] {
+    return [
+      'Zank blames Jerry',
+      'Zank pushes alone and dies',
+      'Pookie carry',
+      'Zank says something sexual',
+      'Zank complains about the map',
+      'Zank AFK twitter'
+    ];
+  }
+
+  private get zankList(): string[] {
+    return [
+      'Jerry complains about hit reg',
+      'Jerry moans',
+      'Jerry says something sexual',
+      'Jerry takes a drink',
+      'Jerry complains about the map',
+      'Jerry blames for body block'
+    ];
   }
   
 }

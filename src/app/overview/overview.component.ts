@@ -43,7 +43,7 @@ export class OverviewComponent implements OnInit {
   }
 
   public fetchBingoItems(): void {
-    this.bingoItems = this.dataService.getBingoBoard();
+    this.bingoItems = this.dataService.getBingoBoard(false);
   }
 
   public async download(): Promise<void> {
@@ -73,5 +73,9 @@ export class OverviewComponent implements OnInit {
     });
 
     this.isDownloading = false;
+  }
+  
+  public onToggle(toggle: boolean) {
+    this.bingoItems = this.dataService.getBingoBoard(toggle);
   }
 }
