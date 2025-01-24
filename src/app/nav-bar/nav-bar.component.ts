@@ -19,13 +19,14 @@ export class NavBarComponent {
   private bokaiiPlaying: boolean = false;
   @Output() public toggleEmitter = new EventEmitter<boolean>();
   @Output() public downloadEmitter = new EventEmitter();
+  @Output() public newBoardEmitter = new EventEmitter();
   
   constructor(private dataService: DataService) {  }
 
   faCheck = faCheck;
 
   public newBingoBoard(): void {
-    window.location.reload();
+    this.newBoardEmitter.emit(this.bokaiiPlaying);
   }
 
   public download(): void {

@@ -25,7 +25,7 @@ export class OverviewComponent implements OnInit {
   
   ngOnInit(): void {
     this.toggleDarkMode();
-    this.fetchBingoItems();
+    this.fetchBingoItems(false);
   }
 
   public toggleDarkMode(): void {
@@ -42,8 +42,8 @@ export class OverviewComponent implements OnInit {
     root.classList.add('lightMode');
   }
 
-  public fetchBingoItems(): void {
-    this.bingoItems = this.dataService.getBingoBoard(false);
+  public fetchBingoItems(bokaiiPlaying: boolean): void {
+    this.bingoItems = this.dataService.getBingoBoard(bokaiiPlaying);
   }
 
   public async download(): Promise<void> {
